@@ -11,12 +11,12 @@
             <input type="text" class="form-control" formControlName="name">
         </div>
         <div class="col-auto">
-            <span class="form-text" *ngIf="isInvalidField('name')" appErrorMessage color='blue'>This field is required</span>
+            <span  appErrorMessage [message]="message" [color]="messageColor" [isValid]="isInvalidField('name')"></span>
         </div>
     </div>
     <div class="row mt-5">
         <div class="col">
-            <button  class="btn btn-primary">
+            <button  class="btn btn-primary" (click)="changeMessageColor()">
                 Save
             </button>
         </div>
