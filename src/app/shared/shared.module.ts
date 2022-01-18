@@ -1,14 +1,18 @@
 import { NgModule } from '@angular/core';
 import { ErrorMessageDirective } from './directives/error-message.directive';
+import { CustomIfDirective } from './directives/custom-if.directive';
 
 
 
 @NgModule({
   declarations: [
-    ErrorMessageDirective
+    ErrorMessageDirective,
+    CustomIfDirective
   ],
   exports:[
-    ErrorMessageDirective
+    ErrorMessageDirective,
+    CustomIfDirective
+
   ]
 })
 export class SharedModule { }

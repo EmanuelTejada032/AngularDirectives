@@ -27,3 +27,15 @@
 <h3 class="mt-5">Form</h3>
 <pre>{{productsForm.valid}}</pre>
 <pre>{{productsForm.value | json}}</pre>
+
+<!-- Structural directive -->
+
+<!-- Example on how to hide and show an element using Structural directives -->
+
+<div class="row mt-5" *customIf="productsForm.valid"> <!-- Custom directive customIf , use * to send a template reference to the directive-->
+    <div class="col">
+        <div class="alert alert-primary">
+            Everything ok
+        </div>
+    </div>
+</div>
